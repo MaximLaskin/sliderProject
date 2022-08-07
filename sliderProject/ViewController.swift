@@ -21,12 +21,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         colorChangeView.layer.cornerRadius = 10
         
-        setupColorLabel()
-        setupColorValueLabel()
         setupSliders()
-        
-        
-        
+        setupColorLabel()
+        setupView()
     }
 
     @IBAction func changeViewColorSliders() {
@@ -34,16 +31,12 @@ class ViewController: UIViewController {
         greenValue.text = String(greenSlider.value)
         blueValue.text = String(blueSlider.value)
         
-        
-        self.colorChangeView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
-        
-        
+        self.colorChangeView.backgroundColor = UIColor(
+            red: CGFloat(redSlider.value),
+            green: CGFloat(greenSlider.value),
+            blue: CGFloat(blueSlider.value),
+            alpha: 1)
     }
-    
-  
-    
-    
-    
     
     // MARK: - Private Methods
     private func setupColorLabel() {
@@ -51,22 +44,17 @@ class ViewController: UIViewController {
         colorGreen.text = "Green:"
         colorBlue.text = "Blue:"
         
-        [colorRed, colorGreen, colorBlue].forEach{$0?.textColor = .white}
-    }
-    
-    private func setupColorValueLabel() {
         redValue.text = String(redSlider.value)
         greenValue.text = String(greenSlider.value)
         blueValue.text = String(blueSlider.value)
-      
-        [redValue, greenValue, blueValue].forEach{$0?.textColor = .white}
+        
+        [colorRed, colorGreen, colorBlue, redValue, greenValue, blueValue].forEach{$0?.textColor = .white}
     }
     
     private func setupSliders() {
-        
-        redSlider.value = 0.5
-        greenSlider.value = 0.5
-        blueSlider.value = 0.5
+        redSlider.value = Float(CGFloat.random(in: 0...1))
+        greenSlider.value = Float(CGFloat.random(in: 0...1))
+        blueSlider.value = Float(CGFloat.random(in: 0...1))
         
         [redSlider, greenSlider, blueSlider].forEach{$0?.minimumValue = 0}
         [redSlider, greenSlider, blueSlider].forEach{$0?.maximumValue = 1}
