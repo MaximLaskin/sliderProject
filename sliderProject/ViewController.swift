@@ -61,6 +61,8 @@ class ViewController: UIViewController {
         redSlider.minimumTrackTintColor = .red
         greenSlider.minimumTrackTintColor = .green
         blueSlider.minimumTrackTintColor = .blue
+        
+        [redSlider, greenSlider, blueSlider].forEach{$0?.maximumTrackTintColor = .gray}
     }
 }
 
