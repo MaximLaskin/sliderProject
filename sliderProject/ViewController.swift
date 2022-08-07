@@ -23,7 +23,6 @@ class ViewController: UIViewController {
         
         setupSliders()
         setupColorLabel()
-        setupView()
     }
 
     @IBAction func changeViewColorSliders() {
@@ -64,4 +63,5 @@ class ViewController: UIViewController {
         blueSlider.minimumTrackTintColor = .blue
     }
 }
+
 
