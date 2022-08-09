@@ -21,20 +21,19 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         colorChangeView.layer.cornerRadius = 10
         
-        setupSliders()
         setupColorLabel()
+        
+        setupSliders()
+       changeViewColorSliders()
+        setupShadowView()
     }
 
     @IBAction func changeViewColorSliders() {
-        redValue.text = String(redSlider.value)
-        greenValue.text = String(greenSlider.value)
-        blueValue.text = String(blueSlider.value)
+        redValue.text = String(format: "%.2f", redSlider.value)
+        greenValue.text = String(format: "%.2f", greenSlider.value)
+        blueValue.text = String(format: "%.2f", blueSlider.value)
         
-        self.colorChangeView.backgroundColor = UIColor(
-            red: CGFloat(redSlider.value),
-            green: CGFloat(greenSlider.value),
-            blue: CGFloat(blueSlider.value),
-            alpha: 1)
+        setupColorView()
     }
     
     // MARK: - Private Methods
@@ -63,6 +62,21 @@ class ViewController: UIViewController {
         blueSlider.minimumTrackTintColor = .blue
         
         [redSlider, greenSlider, blueSlider].forEach{$0?.maximumTrackTintColor = .gray}
+    }
+    
+    private func setupColorView() {
+        colorChangeView.backgroundColor = UIColor(
+            red: CGFloat(redSlider.value),
+            green: CGFloat(greenSlider.value),
+            blue: CGFloat(blueSlider.value),
+            alpha: 1)
+    }
+    
+    private func setupShadowView() {
+        colorChangeView.layer.shadowColor = UIColor.black.cgColor
+        colorChangeView.layer.shadowOpacity = 0.5
+        colorChangeView.layer.shadowOffset = CGSize(width: 10, height: 5)
+        colorChangeView.layer.shadowRadius = 10
     }
 }
 
