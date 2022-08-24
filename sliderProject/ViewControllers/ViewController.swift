@@ -3,6 +3,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK: - IBOutlets
+
     @IBOutlet weak var colorChangeView: UIView!
     
     @IBOutlet weak var colorRed: UILabel!
@@ -16,11 +18,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var redSlider: UISlider!
     @IBOutlet weak var greenSlider: UISlider!
     @IBOutlet weak var blueSlider: UISlider!
-    
+
+    // MARK: - Lifecycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
         colorChangeView.layer.cornerRadius = 10
-        
+        view.addVerticalGradientLayer()
         setupColorLabel()
         
         setupSliders()

@@ -7,16 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		431F7BD128B613860094A148 /* Gradient+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431F7BD028B613860094A148 /* Gradient+.swift */; };
 		4384A8E8289D77EE00ADBAF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4384A8E7289D77EE00ADBAF6 /* AppDelegate.swift */; };
 		4384A8EA289D77EE00ADBAF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4384A8E9289D77EE00ADBAF6 /* SceneDelegate.swift */; };
 		4384A8EC289D77EE00ADBAF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4384A8EB289D77EE00ADBAF6 /* ViewController.swift */; };
 		4384A8EF289D77EE00ADBAF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4384A8ED289D77EE00ADBAF6 /* Main.storyboard */; };
 		4384A8F1289D77EF00ADBAF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4384A8F0289D77EF00ADBAF6 /* Assets.xcassets */; };
 		4384A8F4289D77EF00ADBAF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4384A8F2289D77EF00ADBAF6 /* LaunchScreen.storyboard */; };
-		4384A8FC28A0550600ADBAF6 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4384A8FB28A0550600ADBAF6 /* GradientView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		431F7BD028B613860094A148 /* Gradient+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Gradient+.swift"; sourceTree = "<group>"; };
 		4384A8E4289D77EE00ADBAF6 /* sliderProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sliderProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4384A8E7289D77EE00ADBAF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4384A8E9289D77EE00ADBAF6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -25,7 +26,6 @@
 		4384A8F0289D77EF00ADBAF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4384A8F3289D77EF00ADBAF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4384A8F5289D77EF00ADBAF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4384A8FB28A0550600ADBAF6 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +39,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		431F7BCD28B6123A0094A148 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4384A8EB289D77EE00ADBAF6 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		431F7BCE28B6125B0094A148 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				4384A8F2289D77EF00ADBAF6 /* LaunchScreen.storyboard */,
+				4384A8ED289D77EE00ADBAF6 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		431F7BCF28B612B50094A148 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				4384A8E7289D77EE00ADBAF6 /* AppDelegate.swift */,
+				4384A8E9289D77EE00ADBAF6 /* SceneDelegate.swift */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		431F7BD228B616570094A148 /* Extencion */ = {
+			isa = PBXGroup;
+			children = (
+				431F7BD028B613860094A148 /* Gradient+.swift */,
+			);
+			path = Extencion;
+			sourceTree = "<group>";
+		};
 		4384A8DB289D77EE00ADBAF6 = {
 			isa = PBXGroup;
 			children = (
@@ -58,13 +92,11 @@
 		4384A8E6289D77EE00ADBAF6 /* sliderProject */ = {
 			isa = PBXGroup;
 			children = (
-				4384A8E7289D77EE00ADBAF6 /* AppDelegate.swift */,
-				4384A8E9289D77EE00ADBAF6 /* SceneDelegate.swift */,
-				4384A8EB289D77EE00ADBAF6 /* ViewController.swift */,
-				4384A8ED289D77EE00ADBAF6 /* Main.storyboard */,
-				4384A8FB28A0550600ADBAF6 /* GradientView.swift */,
+				431F7BCD28B6123A0094A148 /* ViewControllers */,
+				431F7BCE28B6125B0094A148 /* Storyboards */,
+				431F7BCF28B612B50094A148 /* SupportFiles */,
+				431F7BD228B616570094A148 /* Extencion */,
 				4384A8F0289D77EF00ADBAF6 /* Assets.xcassets */,
-				4384A8F2289D77EF00ADBAF6 /* LaunchScreen.storyboard */,
 				4384A8F5289D77EF00ADBAF6 /* Info.plist */,
 			);
 			path = sliderProject;
@@ -142,8 +174,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4384A8EC289D77EE00ADBAF6 /* ViewController.swift in Sources */,
+				431F7BD128B613860094A148 /* Gradient+.swift in Sources */,
 				4384A8E8289D77EE00ADBAF6 /* AppDelegate.swift in Sources */,
-				4384A8FC28A0550600ADBAF6 /* GradientView.swift in Sources */,
 				4384A8EA289D77EE00ADBAF6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

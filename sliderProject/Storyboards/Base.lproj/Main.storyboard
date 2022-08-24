@@ -16,10 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uc1-4t-ml7" customClass="GradientView" customModule="sliderProject" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="-144" width="375" height="935"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i3o-tt-V5t">
                                 <rect key="frame" x="20" y="54" width="335" height="128"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -114,17 +110,11 @@
                         <constraints>
                             <constraint firstItem="i3o-tt-V5t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0Ve-Eh-aNQ"/>
                             <constraint firstItem="i3o-tt-V5t" firstAttribute="width" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.893333" id="9Us-Gh-LBm"/>
-                            <constraint firstItem="Uc1-4t-ml7" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="IAf-zl-FaF"/>
-                            <constraint firstItem="Uc1-4t-ml7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bHF-ua-h42"/>
-                            <constraint firstAttribute="trailing" secondItem="Uc1-4t-ml7" secondAttribute="trailing" id="cer-2m-DJZ"/>
                             <constraint firstAttribute="trailing" secondItem="8M7-Ec-JYE" secondAttribute="trailing" constant="20" id="dDx-S1-Zsj"/>
                             <constraint firstItem="8M7-Ec-JYE" firstAttribute="top" secondItem="i3o-tt-V5t" secondAttribute="bottom" constant="50" id="j40-ck-XlB"/>
-                            <constraint firstItem="Uc1-4t-ml7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-144" id="o1R-pq-bVA"/>
                             <constraint firstItem="i3o-tt-V5t" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="54" id="qWQ-To-dPR"/>
-                            <constraint firstAttribute="bottom" secondItem="Uc1-4t-ml7" secondAttribute="bottom" constant="-124" id="tHy-DQ-hYk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="i3o-tt-V5t" secondAttribute="trailing" constant="20" id="tI5-cm-OpJ"/>
                             <constraint firstItem="8M7-Ec-JYE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="tSu-dM-ubR"/>
-                            <constraint firstItem="Uc1-4t-ml7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uAi-O6-49b"/>
                         </constraints>
                     </view>
                     <connections>
