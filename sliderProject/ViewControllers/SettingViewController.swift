@@ -20,22 +20,31 @@ class SettingViewController: UIViewController {
     @IBOutlet weak var greenSlider: UISlider!
     @IBOutlet weak var blueSlider: UISlider!
 
+    var color: UIColor!
+
+    var delegate: SettingViewControllerDelegate!
+
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         colorChangeView.layer.cornerRadius = 10
+        colorChangeView.backgroundColor = color
+
         view.addVerticalGradientLayer()
+
         setupColorLabel()
         setupBackButton()
-        
         setupSliders()
-       changeViewColorSliders()
+        changeViewColorSliders()
         setupShadowView()
     }
 
-    @IBAction func backButtonPressed() {
+    // MARK: - IBAction
 
+    @IBAction func backButtonPressed() {
+        delegate.getColor(for: colorChangeView.backgroundColor ?? .white)
+        dismiss(animated: true)
     }
 
     @IBAction func changeViewColorSliders() {
@@ -50,13 +59,10 @@ class SettingViewController: UIViewController {
 
     private func setupBackButton() {
         backButton.setTitle("Back", for: .normal)
-        backButton.backgroundColor = .blue
+        backButton.backgroundColor = #colorLiteral(red: 0.2348297394, green: 0.2914986682, blue: 1, alpha: 1)
         backButton.tintColor = .white
-        backButton.layer.cornerRadius = 20
-        
-
+        backButton.layer.cornerRadius = 15
     }
-
 
     private func setupColorLabel() {
         colorRed.text = "Red:"
@@ -71,9 +77,9 @@ class SettingViewController: UIViewController {
     }
     
     private func setupSliders() {
-        redSlider.value = Float(CGFloat.random(in: 0...1))
-        greenSlider.value = Float(CGFloat.random(in: 0...1))
-        blueSlider.value = Float(CGFloat.random(in: 0...1))
+//        redSlider.value = Float(CGFloat.random(in: 0...1))
+//        greenSlider.value = Float(CGFloat.random(in: 0...1))
+//        blueSlider.value = Float(CGFloat.random(in: 0...1))
         
         [redSlider, greenSlider, blueSlider].forEach{$0?.minimumValue = 0}
         [redSlider, greenSlider, blueSlider].forEach{$0?.maximumValue = 1}
