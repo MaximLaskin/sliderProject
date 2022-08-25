@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7N2-rX-nlU">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -9,9 +9,31 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="hPh-Ge-dSY">
+            <objects>
+                <viewController id="jpC-rl-WPd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZQR-eS-wpv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="TsN-sa-uF5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="42Q-zx-sjs">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="highlighter" catalog="system" id="sOG-fm-5Jj">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="ShE-9M-Wda"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2VP-6N-TVR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="143.19999999999999" y="79.610194902548727"/>
+        </scene>
+        <!--Setting View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="sliderProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SettingViewController" customModule="sliderProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -104,6 +126,18 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EmX-Yn-E2j">
+                                <rect key="frame" x="147.5" y="562" width="80" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="kJh-gu-3V7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="backButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="tpz-I2-glF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.76806390219892695" green="0.30584002409033284" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -111,13 +145,16 @@
                             <constraint firstItem="i3o-tt-V5t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0Ve-Eh-aNQ"/>
                             <constraint firstItem="i3o-tt-V5t" firstAttribute="width" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.893333" id="9Us-Gh-LBm"/>
                             <constraint firstAttribute="trailing" secondItem="8M7-Ec-JYE" secondAttribute="trailing" constant="20" id="dDx-S1-Zsj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EmX-Yn-E2j" secondAttribute="bottom" constant="72" id="ffb-hB-mSd"/>
                             <constraint firstItem="8M7-Ec-JYE" firstAttribute="top" secondItem="i3o-tt-V5t" secondAttribute="bottom" constant="50" id="j40-ck-XlB"/>
+                            <constraint firstItem="EmX-Yn-E2j" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lzS-ba-gRB"/>
                             <constraint firstItem="i3o-tt-V5t" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="54" id="qWQ-To-dPR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="i3o-tt-V5t" secondAttribute="trailing" constant="20" id="tI5-cm-OpJ"/>
                             <constraint firstItem="8M7-Ec-JYE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="tSu-dM-ubR"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="EmX-Yn-E2j" id="Siw-5V-CbL"/>
                         <outlet property="blueSlider" destination="1kw-3u-hoS" id="XRO-3N-aOT"/>
                         <outlet property="blueValue" destination="SSm-II-paw" id="pcF-1p-KFI"/>
                         <outlet property="colorBlue" destination="0mO-lD-Vlr" id="4JG-dD-rb5"/>
@@ -132,10 +169,29 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.399999999999999" y="79.610194902548727"/>
+            <point key="canvasLocation" x="957.60000000000002" y="79.610194902548727"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="a3m-8q-v6d">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7N2-rX-nlU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="c57-en-OOY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jpC-rl-WPd" kind="relationship" relationship="rootViewController" id="H7H-Ma-Fp3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rFb-Df-k8i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-796" y="79.610194902548727"/>
         </scene>
     </scenes>
     <resources>
+        <image name="highlighter" catalog="system" width="128" height="119"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

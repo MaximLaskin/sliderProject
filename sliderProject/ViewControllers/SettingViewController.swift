@@ -1,12 +1,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SettingViewController: UIViewController {
 
     // MARK: - IBOutlets
 
     @IBOutlet weak var colorChangeView: UIView!
-    
+    @IBOutlet weak var backButton: UIButton!
+
     @IBOutlet weak var colorRed: UILabel!
     @IBOutlet weak var colorGreen: UILabel!
     @IBOutlet weak var colorBlue: UILabel!
@@ -26,10 +27,15 @@ class ViewController: UIViewController {
         colorChangeView.layer.cornerRadius = 10
         view.addVerticalGradientLayer()
         setupColorLabel()
+        setupBackButton()
         
         setupSliders()
        changeViewColorSliders()
         setupShadowView()
+    }
+
+    @IBAction func backButtonPressed() {
+
     }
 
     @IBAction func changeViewColorSliders() {
@@ -41,6 +47,17 @@ class ViewController: UIViewController {
     }
     
     // MARK: - Private Methods
+
+    private func setupBackButton() {
+        backButton.setTitle("Back", for: .normal)
+        backButton.backgroundColor = .blue
+        backButton.tintColor = .white
+        backButton.layer.cornerRadius = 20
+        
+
+    }
+
+
     private func setupColorLabel() {
         colorRed.text = "Red:"
         colorGreen.text = "Green:"
